@@ -1,0 +1,22 @@
+{
+  "name": "sync-graph",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Generates empty commits to match contributions from other public GitHub accounts.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "contributions",
+    "graph"
+  ],
+  "author": "Mauricio Istúriz (@isturiz)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "puppeteer": "^22.12.0"
+  }
+}
