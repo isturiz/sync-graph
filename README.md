@@ -35,8 +35,19 @@ Follow these steps to get started:
 Run the CLI with:
 
 ```sh
-npm start
+pnpm start
 ```
-or (>node 22)
+or for Node.js version 22 and above:
+
 ```sh
 node --run start 
+```
+You will be prompted to enter the GitHub username, the minimum year, and the maximum year for fetching contributions. Additionally, you can decide whether to execute the script immediately or not.
+
+Execute Immediately: If you choose `yes`, the commits will be generated and executed immediately.
+Generate Script Only: If you choose `no`, the commits will be generated in the `script.sh` file for manual execution later.
+Once the script has been executed or generated, you can push the changes to your GitHub repository with:
+
+```sh
+git push origin main
+
