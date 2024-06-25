@@ -44,10 +44,15 @@ node --run start
 ```
 You will be prompted to enter the GitHub username, the minimum year, and the maximum year for fetching contributions. Additionally, you can decide whether to execute the script immediately or not.
 
-Execute Immediately: If you choose `yes`, the commits will be generated and executed immediately.
-Generate Script Only: If you choose `no`, the commits will be generated in the `script.sh` file for manual execution later.
+- Execute Immediately: If you choose `yes`, the commits will be generated and executed immediately.
+- Generate Script Only: If you choose `no`, the commits will be generated in the `script.sh` file for manual execution later.
+
 Once the script has been executed or generated, you can push the changes to your GitHub repository with:
 
 ```sh
 git push origin main
+``` 
 
+### Inspiration
+
+This project was inspired by the work of [charpeni](https://github.com/charpeni) in [sync-external-contributions](https://github.com/charpeni/sync-external-contributions). However, since the original project is no longer maintained and doesn't work as of today, I created this project to fulfill the same need.
