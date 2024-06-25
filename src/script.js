@@ -1,3 +1,4 @@
+import { execSync } from 'child_process';
 import { writeFileSync } from 'node:fs';
 import { load } from 'cheerio';
 import { fetchPageWithPuppeteer } from './github.js';
@@ -30,14 +31,22 @@ function writeScriptFile({ commitData }) {
 
   commitData.forEach((commitCount, date) => {
     for (let i = 0; i < commitCount; i++) {
-      scriptContent += `GIT_COMMITTER_DATE="${date}T00:00:00.000Z" git commit --allow-empty -m "Sync commit for ${date}" --date="${date}T00:00:00.000Z"\n`;
+      const commitMessage = `Sync commit for ${date} #${i + 1}`;
+      // Verificar si el commit ya existe en el historial
+      const existingCommit = execSync(`git log --grep="${commitMessage}"`, { encoding: 'utf-8' }).trim();
+      if (!existingCommit) {
+        scriptContent += `GIT_COMMITTER_DATE="${date}T00:00:00.000Z" git commit --allow-empty -m "${commitMessage}" --date="${date}T00:00:00.000Z"\n`;
+      }
     }
   });
 
-  writeFileSync('script.sh', scriptContent, { encoding: 'utf-8' });
-  console.log('The script.sh has been successfully generated.');
+  if (scriptContent) {
+    writeFileSync('script.sh', scriptContent, { encoding: 'utf-8' });
+    console.log('The script.sh has been successfully generated.');
+  } else {
+    console.log('No new commits to generate.');
+  }
 }
-
 
 export async function generateCommitScript({ username, minYear, maxYear }) {
   const commitData = new Map();
