@@ -1,4 +1,4 @@
-import { promptUser } from './cli.js';
+import { promptUser } from "./cli.js";
 
-console.log("\nHello!\n");
+console.log("\nHello! 👋\n");
 promptUser();
