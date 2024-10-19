@@ -15,14 +15,16 @@ This CLI tool allows you to sync GitHub contributions by generating commit scrip
 
 Follow these steps to get started:
 
-1. **Clone the repository**:
+1. **Use the "Use template" button**
+
+2. **Clone the repository**:
     ```sh
-    git clone git@github.com:isturiz/sync-graph.git
+    git clone your_repository_from_template
     ```
 
 2. **Navigate to the project directory**:
     ```sh
-    cd sync-graph
+    cd your_repository
     ```
 
 3. **Install dependencies**:
