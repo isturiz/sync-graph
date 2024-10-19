@@ -54,7 +54,7 @@ git push origin main
 ```
 
 ### Similar Tools ⚒️
-- (Git Synced)[https://github.com/apappas1129/git-synced]
+- [Git Synced](https://github.com/apappas1129/git-synced)
 
 ### Inspiration
 
