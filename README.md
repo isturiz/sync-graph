@@ -51,7 +51,10 @@ Once the script has been executed or generated, you can push the changes to your
 
 ```sh
 git push origin main
-``` 
+```
+
+### Similar Tools ⚒️
+- (Git Synced)[https://github.com/apappas1129/git-synced]
 
 ### Inspiration
 
