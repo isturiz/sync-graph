@@ -4,6 +4,10 @@
 
 This CLI tool allows you to sync GitHub contributions by generating commit scripts based on the contribution history of a GitHub user. Ideal for merging commit histories from different accounts into one visual contribution graph.
 
+## CHANGELOG
+
+- 2024-10-20: Now the commits use 'No.' to express the number of commits instead of the '#' character to avoid conflicts with repository issues. - 
+
 ## Features
 
 - **Fetch Contribution History**: Retrieves contribution history from any GitHub user.
