@@ -1,7 +1,7 @@
 {
   "name": "sync-graph",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates empty commits to match contributions from other public GitHub accounts.",
   "main": "src/index.js",
   "scripts": {
