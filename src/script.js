@@ -31,7 +31,7 @@ function writeScriptFile(commitData, committerName, committerEmail) {
 
   commitData.forEach((commitCount, date) => {
     for (let i = 0; i < commitCount; i++) {
-      const commitMessage = `Sync commit for ${date} #${i + 1}`;
+      const commitMessage = `Sync commit for ${date} [No. ${i + 1}]`;
       // Verificar si el commit ya existe en el historial
       const existingCommit = execSync(`git log --grep="${commitMessage}"`, { encoding: 'utf-8' }).trim();
       if (!existingCommit) {
